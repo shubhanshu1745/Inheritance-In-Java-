@@ -1,0 +1,49 @@
+
+
+//Defination of Multilevel Inheritance 
+/*
+Multilevel inheritance is a concept in Java where a derived class extends another derived class. This creates a hierarchy of inheritance with a parent class and multiple levels of subclasses.
+*/
+
+/*
+Syntax :
+
+class A {} // Parent class or Level 1
+
+class B extends A {} // Level 2 subclass extending Level 1
+
+class C extends B {} // Level 3 subclass extending Level 2
+
+*/
+class Vehicle {
+    void display() {
+        System.out.println("This is a vehicle.");
+    }
+}
+
+class Car extends Vehicle {
+    void display() {
+        System.out.println("This is a car.");
+    }
+}
+
+class SportsCar extends Car {
+    void display() {
+        System.out.println("This is a sports car.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Vehicle vehicle = new Vehicle();
+        vehicle.display(); // Output: This is a vehicle.
+
+        Car car = new Car();
+        car.display(); // Output: This is a car.
+
+        SportsCar sportsCar = new SportsCar();
+        sportsCar.display(); // Output: This is a sports car.
+    }
+}
+
+
