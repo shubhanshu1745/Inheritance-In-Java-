@@ -1,0 +1,44 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+
+  /*
+  Super Keyword:
+Usage: The super keyword is used to refer to the immediate parent class's instance variable or method.
+Usage in Constructor: It's used to invoke the superclass constructor.
+ 
+ Syntax :
+
+super(arguments);
+
+*/
+//superclass
+class Parent{
+    String message;
+
+    Parent(String message){
+        this.message=message;
+    }
+
+    void display(){
+        System.out.println("Message from Parent class "+message);
+    }
+}
+
+//subclass
+class Child extends Parent{
+    Child(String message){
+        super(message);
+    }
+
+    void displaychild(){
+        System.out.println("Message from child : " + message);
+    }
+}
+class Solution {
+    public static void main(String[] args) {
+        // Write your code here
+        Child child = new Child("Hello , Shubhanshu ");
+        child.displaychild();
+    }
+}
