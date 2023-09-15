@@ -1,0 +1,52 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+
+//superclass
+
+
+/*  1. What is Single Inheritance in Java?
+In Java, single inheritance refers to the concept where a subclass inherits 
+the features (fields and methods) of a single superclass. In other words, 
+a Java class can only extend a single parent class.  */
+
+
+
+//syntax for single inheritance 
+/* class Subclass extends Superclass {
+    // subclass members
+}
+*/
+
+
+/* Method Overriding:
+Definition: Method overriding is the ability of a subclass to
+ provide a specific implementation of a method that is already
+  provided by its superclass.
+*/
+class Animal{
+    String name;
+
+    void speak(){
+        System.out.println("Animal Speaks");
+    }
+}
+
+//subclass
+class Dog extends Animal{
+    void speak(){
+            System.out.println("Dog barks");
+    }
+}
+class Solution {
+    public static void main(String[] args) {
+        // Write your code here
+        Dog myDog= new Dog();
+        myDog.name="rani";
+
+    
+        System.out.println(" My dog name is " + myDog.name);
+        myDog.speak();
+        
+    }
+}
